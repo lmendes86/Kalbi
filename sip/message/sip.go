@@ -8,6 +8,7 @@ import (
 	"github.com/KalbiProject/Kalbi/sdp"
 )
 
+var sipType = 0
 var keepSrc = true
 
 //SipMsg is a representation of a SIP message
@@ -25,6 +26,9 @@ type SipMsg struct {
 	CallId   SipVal
 	ContType SipVal
 	ContLen  SipVal
+	Event    SipVal
+	ETag     SipVal
+	IFTag    SipVal
 	Src      []byte
 	Body     []byte
 	Sdp      sdp.SdpMsg
@@ -55,6 +59,7 @@ func (sm *SipMsg) CopyHeaders(msg *SipMsg) {
 	sm.Cseq = msg.Cseq
 	sm.MaxFwd = msg.MaxFwd
 	sm.ContLen = msg.ContLen
+	sm.Event = msg.Event
 }
 
 //CopySdp copys SDP from one SIP message to another
@@ -69,7 +74,9 @@ func (sm *SipMsg) String() string {
 	sipmsg += sm.Via[0].String() + "\r\n"
 	sipmsg += sm.From.String() + "\r\n"
 	sipmsg += sm.To.String() + "\r\n"
-	sipmsg += sm.Contact.String() + "\r\n"
+	if sm.Contact.String() != "Contact: <:@>" {
+		sipmsg += sm.Contact.String() + "\r\n"
+	}
 	sipmsg += sm.Cseq.String() + "\r\n"
 	if sm.ContType.Value != nil {
 		sipmsg += "Content-Type: " + sm.ContType.String() + "\r\n"
@@ -82,6 +89,18 @@ func (sm *SipMsg) String() string {
 	sipmsg += "Call-ID: " + sm.CallId.String() + "\r\n"
 	sipmsg += "Max-Forwards: " + sm.MaxFwd.String() + "\r\n"
 	sipmsg += "Content-Length: " + sm.ContLen.String() + "\r\n"
+	if sm.Event.Value != nil {
+		sipmsg += "Event: " + sm.Event.String() + "\r\n"
+	}
+	if sm.Exp.Value != nil {
+		sipmsg += "Expires: " + sm.Exp.String() + "\r\n"
+	}
+	if sm.ETag.Value != nil {
+		sipmsg += "SIP-ETag: " + sm.ETag.String() + "\r\n"
+	}
+	if sm.IFTag.Value != nil {
+		sipmsg += "SIP-If-Match: " + sm.IFTag.String() + "\r\n"
+	}
 	sipmsg += "\r\n"
 
 	if sm.Body != nil {
@@ -156,6 +175,12 @@ func Parse(v []byte) (output SipMsg) {
 					output.ContType.Value = lval
 				case lhdr == "content-length":
 					output.ContLen.Value = lval
+				case lhdr == "event":
+					output.Event.Value = lval
+				case lhdr == "sip-etag":
+					output.ETag.Value = lval
+				case lhdr == "sip-if-tag":
+					output.IFTag.Value = lval
 				case lhdr == "user-agent":
 					output.Ua.Value = lval
 				case lhdr == "expires":
@@ -342,8 +367,8 @@ func MessageDetails(data *SipMsg) string {
 }
 
 const (
-	fieldNull       = 0
-	fieldBase       = 1
+	fieldNull = 0
+	fieldBase = 1
 	// fieldValue      = 2
 	fieldName       = 3
 	fieldNameQ      = 4
@@ -382,5 +407,5 @@ const (
 	// fieldProto    = 43
 	// fieldFmt      = 44
 	// fieldCat      = 45
-	fieldIgnore   = 255
+	fieldIgnore = 255
 )
