@@ -5,7 +5,7 @@ package transport
 // "reflect"
 // "testing"
 
-// "github.com/KalbiProject/Kalbi/sip/message"
+// "github.com/lmendes86/Kalbi/sip/message"
 //)
 
 // func TestTCPTransport_Read(t *testing.T) {

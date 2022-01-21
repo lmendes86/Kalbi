@@ -1,8 +1,8 @@
 package dialog
 
 import (
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/log"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/log"
 	"sync"
 )
 

@@ -2,8 +2,8 @@ package test
 
 import (
 	"fmt"
-	"github.com/KalbiProject/Kalbi/sip/message"
-	"github.com/KalbiProject/Kalbi/authentication"
+	"github.com/lmendes86/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/authentication"
 	"testing"
 )
 

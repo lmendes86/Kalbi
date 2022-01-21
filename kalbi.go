@@ -1,12 +1,12 @@
 package kalbi
 
 import (
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/log"
-	"github.com/KalbiProject/Kalbi/sip/dialog"
-	"github.com/KalbiProject/Kalbi/sip/message"
-	"github.com/KalbiProject/Kalbi/sip/transaction"
-	"github.com/KalbiProject/Kalbi/transport"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/log"
+	"github.com/lmendes86/Kalbi/sip/dialog"
+	"github.com/lmendes86/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/sip/transaction"
+	"github.com/lmendes86/Kalbi/transport"
 )
 
 //NewSipStack  creates new sip stack

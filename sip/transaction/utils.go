@@ -2,7 +2,7 @@ package transaction
 
 import (
 	"fmt"
-	"github.com/KalbiProject/Kalbi/log"
+	"github.com/lmendes86/Kalbi/log"
 	"math/rand"
 )
 

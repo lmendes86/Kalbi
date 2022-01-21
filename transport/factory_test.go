@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/KalbiProject/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/interfaces"
 )
 
 type ListenPoint struct {

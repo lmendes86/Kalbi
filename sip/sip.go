@@ -1,7 +1,7 @@
 package sip
 
 import (
-	"github.com/KalbiProject/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/sip/message"
 )
 
 //Parse parses SIP message

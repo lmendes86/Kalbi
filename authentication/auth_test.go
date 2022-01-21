@@ -3,7 +3,7 @@ package authentication_test
 import (
 	"testing"
 
-	"github.com/KalbiProject/Kalbi/authentication"
+	"github.com/lmendes86/Kalbi/authentication"
 	"github.com/stretchr/testify/assert"
 )
 

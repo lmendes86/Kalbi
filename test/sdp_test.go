@@ -1,7 +1,7 @@
 package test
 
 import "testing"
-import "github.com/KalbiProject/Kalbi/sdp"
+import "github.com/lmendes86/Kalbi/sdp"
 
 func TestSDPParser(t *testing.T) {
 	byteMsg := []byte(msg)

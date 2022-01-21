@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 	"time"
-	"github.com/KalbiProject/Kalbi"
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/sip/message"
-	"github.com/KalbiProject/Kalbi/sip/method"
-	"github.com/KalbiProject/Kalbi/sip/status"
-	"github.com/KalbiProject/Kalbi/authentication"
+	"github.com/lmendes86/Kalbi"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/sip/method"
+	"github.com/lmendes86/Kalbi/sip/status"
+	"github.com/lmendes86/Kalbi/authentication"
 )
 
 const (

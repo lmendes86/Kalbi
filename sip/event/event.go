@@ -1,8 +1,8 @@
 package event
 
 import (
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/sip/message"
 )
 
 //SipEvent object that gets passed to the SipListener

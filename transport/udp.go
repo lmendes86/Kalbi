@@ -2,10 +2,10 @@ package transport
 
 import (
 	"fmt"
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/log"
-	"github.com/KalbiProject/Kalbi/sip"
-	"github.com/KalbiProject/Kalbi/sip/event"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/log"
+	"github.com/lmendes86/Kalbi/sip"
+	"github.com/lmendes86/Kalbi/sip/event"
 	reuse "github.com/libp2p/go-reuseport"
 	"net"
 )

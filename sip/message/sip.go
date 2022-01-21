@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/KalbiProject/Kalbi/sdp"
+	"github.com/lmendes86/Kalbi/sdp"
 )
 
 var sipType = 0

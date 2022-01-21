@@ -5,8 +5,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/sip/message"
 )
 
 func TestNewTransactionManager(t *testing.T) {

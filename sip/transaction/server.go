@@ -21,10 +21,10 @@ Server Transaction
 
 import (
 	//"fmt"
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/log"
-	"github.com/KalbiProject/Kalbi/sip/message"
-	"github.com/KalbiProject/Kalbi/sip/method"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/log"
+	"github.com/lmendes86/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/sip/method"
 	"github.com/looplab/fsm"
 )
 
@@ -130,7 +130,7 @@ func (st *ServerTransaction) Receive(msg *message.SipMsg) {
 
 //Respond is used to process response from transport layer
 func (st *ServerTransaction) Respond(msg *message.SipMsg) {
-	//TODO: this will change due to issue https://github.com/KalbiProject/Kalbi/issues/20
+	//TODO: this will change due to issue https://github.com/lmendes86/Kalbi/issues/20
 	log.Log.Info("Message Sent for transactionId " + st.BranchID + ": \n" + message.MessageDetails(msg))
 	if msg.GetStatusCode() < 200 {
 		err := st.FSM.Event(serverInputUser1xx)

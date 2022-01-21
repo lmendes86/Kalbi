@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/KalbiProject/Kalbi/sdp"
-	"github.com/KalbiProject/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/sdp"
+	"github.com/lmendes86/Kalbi/sip/message"
 )
 
 var (

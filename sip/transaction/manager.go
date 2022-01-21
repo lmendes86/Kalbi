@@ -1,10 +1,10 @@
 package transaction
 
 import (
-	"github.com/KalbiProject/Kalbi/interfaces"
-	"github.com/KalbiProject/Kalbi/log"
-	"github.com/KalbiProject/Kalbi/sip/message"
-	"github.com/KalbiProject/Kalbi/sip/method"
+	"github.com/lmendes86/Kalbi/interfaces"
+	"github.com/lmendes86/Kalbi/log"
+	"github.com/lmendes86/Kalbi/sip/message"
+	"github.com/lmendes86/Kalbi/sip/method"
 	"github.com/sirupsen/logrus"
 	"sync"
 )
